@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.candy_dev.tournamentprogram.scenes.TeamView">
+   <children>
+      <Label layoutX="232.0" layoutY="42.0" text="Team Information">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="46.0" layoutY="134.0" prefWidth="150.0" promptText="Team" />
+      <Label layoutX="46.0" layoutY="107.0" prefHeight="18.0" prefWidth="51.0" text="Team">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ListView layoutX="252.0" layoutY="134.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="303.0" layoutY="108.0" prefHeight="25.0" prefWidth="96.0" text="Team Mates">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="534.0" layoutY="108.0" prefHeight="27.0" prefWidth="86.0" text="Points: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
