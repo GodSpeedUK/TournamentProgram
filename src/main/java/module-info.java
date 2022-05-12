@@ -1,10 +1,14 @@
-module tech.candy_dev.tournamentprogram {
+
+module me.dan.tournamentprogram {
     requires javafx.controls;
     requires javafx.fxml;
 
-    requires org.kordamp.bootstrapfx.core;
+    requires com.google.gson;
+    requires Simple.Yaml;
 
-    opens tech.candy_dev.tournamentprogram to javafx.fxml;
-    opens tech.candy_dev.tournamentprogram.scene.controller to javafx.fxml;
-    exports tech.candy_dev.tournamentprogram;
+    opens me.dan.tournamentprogram.individual to com.google.gson;
+    opens me.dan.tournamentprogram.team to com.google.gson;
+    opens me.dan.tournamentprogram to javafx.fxml, com.google.gson;
+    opens me.dan.tournamentprogram.scene.controller to javafx.fxml;
+    exports me.dan.tournamentprogram;
 }
