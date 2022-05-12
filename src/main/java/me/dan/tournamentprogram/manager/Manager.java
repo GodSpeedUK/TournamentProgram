@@ -1,5 +1,6 @@
 package me.dan.tournamentprogram.manager;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,6 +38,10 @@ public abstract class Manager<T> {
 
     public Map<Integer, T> getMap() {
         return map;
+    }
+
+    public Collection<T> getAll() {
+        return getMap().values();
     }
 
 }

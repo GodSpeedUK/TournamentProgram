@@ -2,11 +2,12 @@ package me.dan.tournamentprogram.team;
 
 import me.dan.tournamentprogram.TournamentProgram;
 import me.dan.tournamentprogram.gson.GsonUtil;
+import me.dan.tournamentprogram.member.Member;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team {
+public class Team implements Member {
 
     private final String name;
     private int points;
@@ -24,11 +25,11 @@ public class Team {
         return name;
     }
 
-    public int getPoints() {
+    public int getScore() {
         return points;
     }
 
-    public void setPoints(int points) {
+    public void setScore(int points) {
         this.points = points;
     }
 

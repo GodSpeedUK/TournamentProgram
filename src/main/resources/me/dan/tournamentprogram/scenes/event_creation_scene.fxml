@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="401.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.candy_dev.tournamentprogram.scenes.EventCreationScene">
+<AnchorPane prefHeight="401.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dan.tournamentprogram.scene.controller.EventCreationScene">
     <children>
         <Label layoutX="257.0" layoutY="26.0" text="Event Creation" textAlignment="CENTER">
             <font>
                 <Font name="Bell MT Bold" size="38.0" />
             </font>
         </Label>
-        <ComboBox fx:id="typeSelectionBox" layoutX="163.0" layoutY="121.0" prefWidth="150.0" />
+        <ComboBox fx:id="creationTypeSelect" layoutX="163.0" layoutY="121.0" prefWidth="150.0" />
         <Label layoutX="167.0" layoutY="87.0" text="Creation Type">
             <font>
                 <Font size="23.0" />
@@ -28,7 +28,7 @@
             </font>
         </Label>
         <Button layoutX="332.0" layoutY="286.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="101.0" text="Create" />
-        <Button layoutX="332.0" layoutY="332.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="101.0" text="Main Menu" />
+        <Button layoutX="332.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#onMainMenuButtonClicked" prefHeight="34.0" prefWidth="101.0" text="Main Menu" />
       <Label layoutX="439.0" layoutY="87.0" text="Members">
          <font>
             <Font size="23.0" />

@@ -24,8 +24,17 @@ public class MainSceneController {
     @FXML
     private Button scoreboardButton;
 
-    public void onIndividualAndTeamCreatorClick(MouseEvent mouseEvent) {
+    public void switchScene(MouseEvent mouseEvent, String scene){
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        TournamentProgram.getInstance().getSceneManager().showScene(stage, "creation_scene");
+        TournamentProgram.getInstance().getSceneManager().showScene(stage, scene);
     }
+
+    public void onIndividualAndTeamCreatorClick(MouseEvent mouseEvent) {
+        switchScene(mouseEvent, "creation_scene");
+    }
+
+    public void onEventCreatorClick(MouseEvent mouseEvent) {
+        switchScene(mouseEvent, "event_creation_scene");
+    }
+
 }

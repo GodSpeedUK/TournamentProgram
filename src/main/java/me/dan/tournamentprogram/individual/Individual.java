@@ -2,8 +2,9 @@ package me.dan.tournamentprogram.individual;
 
 import me.dan.tournamentprogram.TournamentProgram;
 import me.dan.tournamentprogram.gson.GsonUtil;
+import me.dan.tournamentprogram.member.Member;
 
-public class Individual {
+public class Individual implements Member {
 
     private final String name;
     private int score = 0;

@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="401.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.candy_dev.tournamentprogram.scenes.ScoreboardScene">
+<AnchorPane prefHeight="401.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dan.tournamentprogram.scene.controller.ScoreboardScene">
    <children>
       <Label layoutX="272.0" layoutY="38.0" text="Scoreboard" textAlignment="CENTER">
          <font>

@@ -11,4 +11,5 @@ module me.dan.tournamentprogram {
     opens me.dan.tournamentprogram to javafx.fxml, com.google.gson;
     opens me.dan.tournamentprogram.scene.controller to javafx.fxml;
     exports me.dan.tournamentprogram;
+
 }
