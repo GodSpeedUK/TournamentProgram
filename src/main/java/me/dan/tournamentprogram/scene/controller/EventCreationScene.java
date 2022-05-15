@@ -2,8 +2,7 @@ package me.dan.tournamentprogram.scene.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import me.dan.tournamentprogram.TournamentProgram;
@@ -19,6 +18,9 @@ public class EventCreationScene {
 
     @FXML
     private ComboBox<String> creationTypeSelect;
+
+    @FXML
+    private TextField nameField;
 
     @FXML
     private ComboBox<String> memberSelection;
@@ -86,7 +88,7 @@ public class EventCreationScene {
 
         Member member = memberMap.get(memberSelection.getSelectionModel().getSelectedIndex());
 
-        if(scoreMap.containsKey(member)){
+        if (scoreMap.containsKey(member)) {
             return;
         }
 
@@ -94,5 +96,48 @@ public class EventCreationScene {
         scoreMap.put(member, points);
         memberList.getItems().add(member.getName() + " (" + member.getId() + ") - " + points);
     }
+
+    public void onCreateButtonClick(MouseEvent mouseEvent) {
+        if (nameField.getText() == null || nameField.getText().equalsIgnoreCase("")) {
+            return;
+        }
+
+        String name = nameField.getText();
+
+        if (name == null || name.equalsIgnoreCase("")) {
+            error("You must set an Event Name!");
+            return;
+        }
+
+        String type = creationTypeSelect.getSelectionModel().getSelectedItem();
+
+        if (type == null || type.equalsIgnoreCase("")) {
+            error("You must select an Event Type!");
+            return;
+        }
+
+
+        if (scoreMap.isEmpty()) {
+            error("You must add Members to the Event!");
+            return;
+        }
+
+        if (TournamentProgram.getInstance().getEventManager().createEvent(name, type, scoreMap)) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setContentText("Event Created: " + name);
+            alert.show();
+            return;
+        }
+        error("Could not create Event!");
+    }
+
+    private void error(String text) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setContentText(text);
+        alert.show();
+    }
+
 
 }

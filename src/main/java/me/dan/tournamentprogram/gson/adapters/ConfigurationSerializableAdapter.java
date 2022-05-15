@@ -1,5 +1,5 @@
-package me.dan.tournamentprogram.gson.adapters;
 
+package me.dan.tournamentprogram.gson.adapters;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import org.simpleyaml.configuration.serialization.ConfigurationSerializable;
@@ -8,7 +8,6 @@ import org.simpleyaml.configuration.serialization.ConfigurationSerialization;
 import java.lang.reflect.Type;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
 public class ConfigurationSerializableAdapter implements JsonSerializer<ConfigurationSerializable>, JsonDeserializer<ConfigurationSerializable> {
 
     final Type objectStringMapType = new TypeToken<Map<String, Object>>() {

@@ -26,13 +26,14 @@ public class Individual implements Member {
 
     public void setScore(int score) {
         this.score = score;
+        save();
     }
 
     public int getId() {
         return id;
     }
 
-    public void save(){
+    public void save() {
         GsonUtil.save(TournamentProgram.getInstance().getIndividualManager().getDirectory(), id + "", this);
     }
 

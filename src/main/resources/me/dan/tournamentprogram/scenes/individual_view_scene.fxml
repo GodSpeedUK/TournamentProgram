@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dan.tournamentprogram.scene.controller.IndividualViewScene">
    <children>
@@ -19,10 +19,16 @@
          </font>
       </Label>
       <ComboBox fx:id="individualComboBox" layoutX="276.0" layoutY="160.0" prefWidth="150.0" promptText="Individual" />
-      <Label fx:id="pointsLabel" layoutX="316.0" layoutY="206.0" prefHeight="32.0" prefWidth="91.0" text="Points: " textAlignment="CENTER">
+      <Label fx:id="pointsLabel" layoutX="316.0" layoutY="206.0" prefHeight="32.0" prefWidth="91.0" text="Points: ">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
+      <Label fx:id="pointView" layoutX="316.0" layoutY="238.0" prefHeight="32.0" prefWidth="91.0" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="301.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#onMainMenuButtonClicked" prefHeight="34.0" prefWidth="101.0" text="Main Menu" />
    </children>
 </AnchorPane>

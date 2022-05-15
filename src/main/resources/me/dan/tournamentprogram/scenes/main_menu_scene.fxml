@@ -15,7 +15,7 @@
       <Button layoutX="302.0" layoutY="302.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" text="Quit" />
       <Button fx:id="individualAndTeamCreatorButton" layoutX="139.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#onIndividualAndTeamCreatorClick" prefHeight="40.0" prefWidth="163.0" text="Individual &amp; Team Creator" />
       <Button fx:id="eventCreatorButton" layoutX="400.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#onEventCreatorClick" prefHeight="40.0" prefWidth="163.0" text="Event Creator" />
-      <Button fx:id="individualInfoButton" layoutX="139.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="163.0" text="Individual Information " />
+      <Button fx:id="individualInfoButton" layoutX="139.0" layoutY="180.0" mnemonicParsing="false" onMouseClicked="#onIndividualViewClick" prefHeight="40.0" prefWidth="163.0" text="Individual Information " />
       <Button fx:id="teamInfoButton" layoutX="400.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="163.0" text="Team Information" />
       <Button fx:id="scoreboardButton" layoutX="275.0" layoutY="240.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="163.0" text="Scoreboard" />
    </children>

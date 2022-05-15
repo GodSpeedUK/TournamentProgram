@@ -27,7 +27,7 @@
                 <Font size="23.0" />
             </font>
         </Label>
-        <Button layoutX="332.0" layoutY="286.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="101.0" text="Create" />
+        <Button layoutX="332.0" layoutY="286.0" mnemonicParsing="false" onMouseClicked="#onCreateButtonClick" prefHeight="34.0" prefWidth="101.0" text="Create" />
         <Button layoutX="332.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#onMainMenuButtonClicked" prefHeight="34.0" prefWidth="101.0" text="Main Menu" />
       <Label layoutX="439.0" layoutY="87.0" text="Members">
          <font>

@@ -2,6 +2,7 @@ package me.dan.tournamentprogram;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import me.dan.tournamentprogram.event.EventManager;
 import me.dan.tournamentprogram.individual.IndividualManager;
 import me.dan.tournamentprogram.scene.SceneManager;
 import me.dan.tournamentprogram.team.TeamManager;
@@ -19,23 +20,27 @@ public class TournamentProgram extends Application {
 
     private final IndividualManager individualManager;
 
+    private final EventManager eventManager;
+
     private final File dataFolder;
 
     public TournamentProgram() {
         instance = this;
+
         String userName = System.getProperty("user.name");
         File appData = new File("C:/users/" + userName + "/AppData/Roaming/");
         this.dataFolder = new File(appData, ".tournament");
         if (!this.dataFolder.exists()) {
             this.dataFolder.mkdirs();
         }
-        this.sceneManager = new SceneManager();
         this.teamManager = new TeamManager();
         this.individualManager = new IndividualManager();
+        this.eventManager = new EventManager();
+        this.sceneManager = new SceneManager();
     }
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) {
         stage.show();
         this.sceneManager.showScene(stage, "main_menu_scene");
     }
@@ -58,6 +63,10 @@ public class TournamentProgram extends Application {
 
     public IndividualManager getIndividualManager() {
         return individualManager;
+    }
+
+    public EventManager getEventManager() {
+        return eventManager;
     }
 
     public File getDataFolder() {

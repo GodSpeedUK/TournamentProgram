@@ -31,6 +31,7 @@ public class Team implements Member {
 
     public void setScore(int points) {
         this.points = points;
+        save();
     }
 
     public List<String> getMembers() {
@@ -39,6 +40,7 @@ public class Team implements Member {
 
     public void setMembers(List<String> members) {
         this.members = members;
+        save();
     }
 
     public int getId() {
