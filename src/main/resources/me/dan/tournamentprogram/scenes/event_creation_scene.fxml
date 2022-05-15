@@ -36,7 +36,7 @@
       </Label>
       <ComboBox fx:id="memberSelection" layoutX="439.0" layoutY="121.0" prefHeight="19.0" prefWidth="112.0" promptText="Member" />
       <ComboBox fx:id="pointSelection" layoutX="561.0" layoutY="121.0" prefHeight="25.0" prefWidth="112.0" promptText="Points" />
-      <Button fx:id="addButton" layoutX="439.0" layoutY="164.0" mnemonicParsing="false" text="Add" />
+      <Button fx:id="addButton" layoutX="439.0" layoutY="164.0" mnemonicParsing="false" onMouseClicked="#onAddButtonClick" text="Add" />
       <ListView fx:id="memberList" layoutX="487.0" layoutY="159.0" prefHeight="94.0" prefWidth="188.0" />
     </children>
 </AnchorPane>

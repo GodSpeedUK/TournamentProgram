@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class Manager<T> {
+public class Manager<T> {
 
     private final Map<Integer, T> map;
 
@@ -42,6 +42,10 @@ public abstract class Manager<T> {
 
     public Collection<T> getAll() {
         return getMap().values();
+    }
+
+    public void clear(){
+        getMap().clear();
     }
 
 }
