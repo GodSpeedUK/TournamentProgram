@@ -42,6 +42,8 @@ public class TournamentProgram extends Application {
     @Override
     public void start(Stage stage) {
         stage.show();
+        stage.setResizable(false);
+        stage.setTitle("Tournament Program");
         this.sceneManager.showScene(stage, "main_menu_scene");
     }
 

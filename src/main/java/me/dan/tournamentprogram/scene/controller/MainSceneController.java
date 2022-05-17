@@ -38,7 +38,22 @@ public class MainSceneController {
     }
 
     public void onIndividualViewClick(MouseEvent mouseEvent) {
+        IndividualViewController.getInstance().refresh();
+        IndividualViewController.getInstance().refreshList();
         switchScene(mouseEvent, "individual_view_scene");
+    }
+
+    public void onTeamViewClick(MouseEvent mouseEvent) {
+        TeamViewController.getInstance().refreshTeamList();
+        switchScene(mouseEvent, "team_view_scene");
+    }
+
+    public void onScoreBoardClick(MouseEvent mouseEvent){
+        switchScene(mouseEvent, "scoreboard_scene");
+    }
+
+    public void onQuitButtonClick(MouseEvent mouseEvent) {
+        System.exit(1);
     }
 
 }
